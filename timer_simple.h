@@ -34,11 +34,11 @@ void stop_timer(void)
 
 int callback_reset(void)
 {
-  if (NRF_TIMER1->EVENTS_COMPARE[0] != 0)   // compare the value and step into the function
+  if (NRF_TIMER1->EVENTS_COMPARE[0] != 0)   // compare the value and step into the function --->0x140 offset
   { 
     Serial.println("Reset function is called");
 
-    NRF_TIMER1->EVENTS_COMPARE[0] = 0;  // resetting the value to restart the count
+    NRF_TIMER1->EVENTS_COMPARE[0] = 0;  // resetting the value to restart the count--->0x140 offset
   }
 }
 
