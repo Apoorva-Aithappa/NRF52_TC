@@ -11,7 +11,7 @@
 
 void start_timer(void, int trigger_interval, (*callback_function)())
 {
-  NRF_TIMER1->PRESCALER = 4;	// 16/(2^4) gives timer of resolution 1 micro second 
+  NRF_TIMER1->PRESCALER = 4;	// 16/(2^4) gives timer of resolution 1 micro second --->0x510 offset
 
   NRF_TIMER1->TASKS_STOP = 1;	// Stop timer
   NRF_TIMER1->TASKS_CLEAR = 1; // Clear timer
